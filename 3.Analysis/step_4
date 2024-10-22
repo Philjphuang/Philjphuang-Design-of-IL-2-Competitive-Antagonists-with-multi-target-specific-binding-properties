@@ -1,0 +1,29 @@
+#把ASGBIE所有结果都整合在一起
+# 定义文件名列表
+file_names = ['file1.txt', 'file2.txt', 'file3.txt', 'file4.txt', 'file5.txt']  # 请将文件名替换为实际的文件名列表
+
+# 创建一个字典来存储每个文件的数据
+file_data = {}
+
+# 读取每个文件的数据并存储到字典中
+for file_name in file_names:
+    with open(file_name, 'r') as file:
+        lines = file.readlines()
+        file_data[file_name] = lines
+
+# 获取最大行数
+max_lines = max(len(lines) for lines in file_data.values())
+
+# 创建一个新的文件来保存整合后的数据
+output_file = 'merged_data.txt'  # 输出文件名
+with open(output_file, 'w') as file:
+    for i in range(max_lines):
+        for file_name in file_names:
+            if i < len(file_data[file_name]):
+                line = file_data[file_name][i].strip()
+                file.write(line)
+            file.write('\t')  # 添加制表符分隔每个文件的数据
+        file.write('\n')  # 在每行末尾添加换行符
+
+print(f"数据已整合并保存到 {output_file} 文件中。")
+

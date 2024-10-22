@@ -1,0 +1,13 @@
+bash step_1
+bash step_2
+mv deal_result ../ala-pre
+cd ../ala-pre/deal_result
+bash step_3.1
+bash step_3.9
+python step_4
+cp merged_data.txt input1.txt
+python step_5
+cp output.txt input2.txt
+python step_6
+cp output2.txt input3.txt
+python step_7

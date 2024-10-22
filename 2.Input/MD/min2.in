@@ -1,0 +1,12 @@
+ min without restrain
+ &cntrl
+  imin   = 1,
+  maxcyc = 200000,
+  ncyc   = 100000,
+  ntb    = 1,
+  ntr    = 0,
+  cut    = 10, 
+  ntpr   = 500
+  ioutfm=1,
+  ntxo=1,
+ /

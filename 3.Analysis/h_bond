@@ -1,0 +1,5 @@
+parm c.prmtop
+trajin md2.mdcrd 1 2000
+hbond donormask :1-128 acceptormask :129-561 out nhb1.dat avgout avghb1.dat
+hbond donormask :129-561 acceptormask :1-128 out nhb2.dat avgout avghb2.dat
+

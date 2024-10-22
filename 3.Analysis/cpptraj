@@ -1,0 +1,8 @@
+parm c.prmtop
+trajin md.mdcrd 0 last 1
+reference c.inpcrd
+rms reference out p.rmsd :1-131@CA,C,N time 0.01
+rms reference out l.rmsd :132-262@CA,C,N time 0.01
+rms reference out c.rmsd :@CA,C,N time 0.01
+run
+quit

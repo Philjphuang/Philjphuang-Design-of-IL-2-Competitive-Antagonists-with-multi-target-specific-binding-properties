@@ -1,0 +1,7 @@
+mkdir deal_result
+cp -r result ./deal_result/1
+cp -r result ./deal_result/2
+cp -r result ./deal_result/3
+cp -r result ./deal_result/4
+cp step* ./deal_result
+cp -r result ./deal_result/5

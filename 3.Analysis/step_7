@@ -1,0 +1,29 @@
+# 打开要处理的文件（假设文件名为input.txt）
+input_file = "input3.txt"
+
+# 打开一个新文件来保存处理后的内容（假设文件名为output.txt）
+output_file = "terminal_result.txt"
+
+with open(input_file, 'r') as file:
+    with open(output_file, 'w') as output:
+        for line in file:
+            # 将每一行按空格分割成单词
+            words = line.split()
+            
+            # 提取第一个整数和字母部分
+            first_integer = words[0]
+            letters = words[1]
+            
+            # 提取数字部分并进行排序
+            numbers = sorted(map(float, words[2:]))
+            
+            # 将排序后的数字部分与第一个整数和字母部分重新组合成一行
+            sorted_line = f"{first_integer} {letters} {' '.join(map(str, numbers))}\n"
+            
+            # 将处理后的行写入输出文件
+            output.write(sorted_line)
+
+# 关闭文件
+file.close()
+output.close()
+

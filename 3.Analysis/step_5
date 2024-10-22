@@ -1,0 +1,26 @@
+#把整合结果中所有负值都删除
+import re
+
+# 打开要处理的文件（假设文件名为input.txt）
+input_file = "input1.txt"
+
+# 打开一个新文件来保存处理后的内容（假设文件名为output.txt）
+output_file = "output.txt"
+
+with open(input_file, 'r') as file:
+    with open(output_file, 'w') as output:
+        for line in file:
+            # 使用正则表达式查找每行中的负数并删除它们
+            line_without_negatives = re.sub(r'-\d+\.\d+|\b-\d+\b', '', line)
+            
+            # 将处理后的行写入输出文件
+            output.write(line_without_negatives)
+
+# 关闭文件
+file.close()
+output.close()
+
+# 删除原文件（可选）
+
+# 将输出文件重命名为原文件名（可选）
+

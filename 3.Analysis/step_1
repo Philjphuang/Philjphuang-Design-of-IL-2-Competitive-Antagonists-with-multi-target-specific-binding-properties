@@ -1,0 +1,6 @@
+mkdir result
+cp TOTAL.py ./result
+for ((i=10;i<=28;i++))
+do
+cp $i/resfile.in ./result/resfile.$i.in 
+done

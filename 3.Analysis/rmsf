@@ -1,0 +1,10 @@
+parm  ./c.prmtop
+trajin ./md2.mdcrd 0 last 1
+
+reference ./c.pdb
+center :1-660 mass
+image center familiar
+rms reference @CA
+atomicfluct out rmsf_residue.dat :1-660@CA,C,N byres
+atomicfluct out rmsf_allatom.dat :1-660@CA,C,N byatom
+

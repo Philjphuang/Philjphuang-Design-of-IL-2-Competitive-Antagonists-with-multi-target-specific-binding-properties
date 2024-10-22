@@ -1,0 +1,14 @@
+minimisation
+ &cntrl
+   imin = 1, ntmin = 2, maxcyc = 5000,  ncyc = 500, dx0 = 1.0D-7,
+   ntb = 1,  ntr = 0,   cut = 10,
+   dielc =   1,  intdiel= 1,
+   ntpr = 100,
+
+   icfe = 1, ifsc = 1, clambda = 0.95, scalpha = 0.5, scbeta = 12.0,
+   logdvdl = 0,
+   timask1 = ':135,134,133,132,', timask2 = ':37,68,60,107,',
+   scmask1 = ':135,134,133,132,', scmask2 = ':37,68,60,107,',
+/
+&ewald
+/
